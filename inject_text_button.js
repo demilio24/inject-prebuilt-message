@@ -1,15 +1,15 @@
-// Function to inject text into the input field
+// Function to inject text into the textarea field
 function injectText() {
-    // Select the input field using the data-q attribute
-    let inputField = document.querySelector("input[data-q='first_message']");
+    // Select the textarea using the data-q attribute
+    let textAreaField = document.querySelector("textarea[data-q='first_message']");
     
-    if (inputField) {
-        inputField.value = "sample sentence"; // Set the value
-        inputField.setAttribute("value", "sample sentence"); // Ensure persistence
-        inputField.dispatchEvent(new Event('input', { bubbles: true })); // Trigger input event
-        console.log("✅ Successfully injected text into the field.");
+    if (textAreaField) {
+        textAreaField.value = "sample sentence"; // Set the value
+        textAreaField.setAttribute("value", "sample sentence"); // Ensure persistence
+        textAreaField.dispatchEvent(new Event('input', { bubbles: true })); // Trigger input event
+        console.log("✅ Successfully injected text into the textarea.");
     } else {
-        console.error("❌ Input field not found! Retrying...");
+        console.error("❌ Textarea field not found! Retrying...");
         setTimeout(injectText, 500); // Retry after 500ms
     }
 }
