@@ -71,11 +71,11 @@ button.addEventListener("click", () => {
     setFieldValues();
 });
 
-// Append the button above the "First Message" label
+// Append the button above the first message box
 function positionButton() {
-    let firstMessageLabel = document.querySelector("label[for='first_message'], label[for='first_message *']"); // Selecting the label
-    if (firstMessageLabel) {
-        firstMessageLabel.parentNode.insertBefore(button, firstMessageLabel); // Insert button before label
+    let firstMessage = document.querySelector("textarea[data-q='first_message']");
+    if (firstMessage) {
+        firstMessage.parentNode.insertBefore(button, firstMessage);
     } else {
         setTimeout(positionButton, 500);
     }
