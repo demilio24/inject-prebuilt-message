@@ -1,7 +1,7 @@
 // Function to inject text into the input field
 function injectText() {
-    // Select the input field using its placeholder text
-    let inputField = document.querySelector("input[placeholder='First Message']");
+    // Select the input field using the data-q attribute
+    let inputField = document.querySelector("input[data-q='first_message']");
     
     if (inputField) {
         inputField.value = "sample sentence"; // Set the value
@@ -27,6 +27,7 @@ button.style.color = "white";
 button.style.border = "none";
 button.style.cursor = "pointer";
 button.style.fontSize = "16px";
+button.style.borderRadius = "5px";
 
 // Add event listener to button
 button.addEventListener("click", injectText);
