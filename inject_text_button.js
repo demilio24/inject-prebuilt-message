@@ -41,9 +41,10 @@ document.head.appendChild(fontLink);
 // Create the button
 let button = document.createElement("button");
 button.innerText = "Inject Sample Sentences";
-button.style.position = "relative";
-button.style.display = "block";
-button.style.margin = "15px auto"; // Centers the button with top & bottom padding
+button.style.position = "fixed";
+button.style.top = "15px"; // Top-right corner
+button.style.right = "15px"; 
+button.style.zIndex = "1000";
 button.style.padding = "10px 20px";
 button.style.backgroundColor = "#6a0dad"; // Purple color
 button.style.color = "white";
@@ -71,15 +72,5 @@ button.addEventListener("click", () => {
     setFieldValues();
 });
 
-// Append the button above the first message box
-function positionButton() {
-    let firstMessage = document.querySelector("textarea[data-q='first_message']");
-    if (firstMessage) {
-        firstMessage.parentNode.insertBefore(button, firstMessage);
-    } else {
-        setTimeout(positionButton, 500);
-    }
-}
-
-// Position button once fields load
-setTimeout(positionButton, 1500);
+// Append the button to the page (now permanently in the top-right corner)
+document.body.appendChild(button);
