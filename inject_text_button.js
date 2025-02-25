@@ -52,11 +52,11 @@ document.head.appendChild(style);
 let button = document.createElement("button");
 button.innerText = "Inject Sample Sentences";
 button.style.position = "fixed";
-button.style.top = "15px"; // Top-right corner
+button.style.top = "35px"; // Increased from 15px to 35px to add 20px padding
 button.style.right = "15px";
 button.style.zIndex = "1000";
 button.style.padding = "14px 28px"; // 40% bigger
-button.style.backgroundColor = "#6a0dad"; // Purple color
+button.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)"; // Gradient from blue to purple
 button.style.color = "white";
 button.style.border = "none";
 button.style.cursor = "pointer";
@@ -71,10 +71,10 @@ button.style.animation = "fadeIn 0.6s ease-out"; // Entrance animation
 
 // Apply hover effect
 button.addEventListener("mouseenter", () => {
-    button.style.backgroundColor = "#5c0dbd"; // Darker purple on hover
+    button.style.background = "linear-gradient(90deg, #0359b3, #5c0dbd)"; // Slightly darker gradient on hover
 });
 button.addEventListener("mouseleave", () => {
-    button.style.backgroundColor = "#6a0dad"; // Original purple
+    button.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)"; // Revert to original gradient
 });
 
 // Apply grow effect on click
