@@ -6,30 +6,30 @@ function setFieldValues() {
     let fourthMessage = document.querySelector("textarea[data-q='fourth_message_(follow_up_#3)']");
 
     if (firstMessage) {
-        firstMessage.value = "Hey {{contact.name}}, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}! Hope you're doing great! 😊 If you had a good experience with us, would you mind leaving a quick review? It helps us a ton! 🙏 Here’s the link: {{ custom_values.leave_a_review_link }}. Thanks so much!";
+        firstMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.";
         firstMessage.setAttribute("value", firstMessage.value);
         firstMessage.dispatchEvent(new Event('input', { bubbles: true }));
     }
 
     if (secondMessage) {
-        secondMessage.value = "Hey {{contact.name}}, just following up! If you had a great experience with {{ custom_values.business_name }}, we’d love to hear about it! ⭐ Your feedback means everything to us. Quick review here: {{ custom_values.leave_a_review_link }}. Thanks a bunch!";
+        secondMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.";
         secondMessage.setAttribute("value", secondMessage.value);
         secondMessage.dispatchEvent(new Event('input', { bubbles: true }));
     }
 
     if (thirdMessage) {
-        thirdMessage.value = "Hey {{contact.name}}, just wanted to check in! Your opinion really matters to us at {{ custom_values.business_name }}. If you’ve got a sec, we’d love for you to leave a review here: {{ custom_values.leave_a_review_link }}. It’d mean a lot! ❤️";
+        thirdMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nI know life gets busy, but I wanted to check in one more time. If you had a great experience with us, would you mind leaving a quick review? It only takes a moment, and it really helps us out.\n\nAppreciate you!\n\nLink to leave a review below.";
         thirdMessage.setAttribute("value", thirdMessage.value);
         thirdMessage.dispatchEvent(new Event('input', { bubbles: true }));
     }
 
     if (fourthMessage) {
-        fourthMessage.value = "Hey {{contact.name}}, this is the last time we’ll bug you! 😅 If you haven’t yet, we’d really appreciate a quick review for {{ custom_values.business_name }}. It helps us improve & keeps us going! 🙏 Here’s the link: {{ custom_values.leave_a_review_link }}. Thanks again!";
+        fourthMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nI promise this is the last time I’ll ask! We’d love to hear your thoughts on your experience with us. If you haven’t had a chance to leave a review yet, it would mean a lot.\n\nThanks again for your time and support!\n\nLink to leave a review below.";
         fourthMessage.setAttribute("value", fourthMessage.value);
         fourthMessage.dispatchEvent(new Event('input', { bubbles: true }));
     }
 
-    console.log("✅ Sample messages injected.");
+    console.log("✅ Updated messages injected.");
 }
 
 // Load the Poppins font
