@@ -5,29 +5,30 @@ function setFieldValues() {
     let thirdMessage = document.querySelector("textarea[data-q='third_message_(follow_up_#2)']");
     let fourthMessage = document.querySelector("textarea[data-q='fourth_message_(follow_up_#3)']");
 
-    if (firstMessage) {
-        firstMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.";
-        firstMessage.setAttribute("value", firstMessage.value);
-        firstMessage.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+   if (firstMessage) {
+    firstMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE].\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.";
+    firstMessage.setAttribute("value", firstMessage.value);
+    firstMessage.dispatchEvent(new Event('input', { bubbles: true }));
+}
 
-    if (secondMessage) {
-        secondMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.";
-        secondMessage.setAttribute("value", secondMessage.value);
-        secondMessage.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+if (secondMessage) {
+    secondMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE] again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.";
+    secondMessage.setAttribute("value", secondMessage.value);
+    secondMessage.dispatchEvent(new Event('input', { bubbles: true }));
+}
 
-    if (thirdMessage) {
-        thirdMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nI know life gets busy, but I wanted to check in one more time. If you had a great experience with us, would you mind leaving a quick review? It only takes a moment, and it really helps us out.\n\nAppreciate you!\n\nLink to leave a review below.";
-        thirdMessage.setAttribute("value", thirdMessage.value);
-        thirdMessage.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+if (thirdMessage) {
+    thirdMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE].\n\nI know life gets busy, but I wanted to check in one more time. If you had a great experience with us, would you mind leaving a quick review? It only takes a moment, and it really helps us out.\n\nAppreciate you!\n\nLink to leave a review below.";
+    thirdMessage.setAttribute("value", thirdMessage.value);
+    thirdMessage.dispatchEvent(new Event('input', { bubbles: true }));
+}
 
-    if (fourthMessage) {
-        fourthMessage.value = "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nI promise this is the last time I’ll ask! We’d love to hear your thoughts on your experience with us. If you haven’t had a chance to leave a review yet, it would mean a lot.\n\nThanks again for your time and support!\n\nLink to leave a review below.";
-        fourthMessage.setAttribute("value", fourthMessage.value);
-        fourthMessage.dispatchEvent(new Event('input', { bubbles: true }));
-    }
+if (fourthMessage) {
+    fourthMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE] again.\n\nI promise this is the last time I’ll ask! We’d love to hear your thoughts on your experience with us. If you haven’t had a chance to leave a review yet, it would mean a lot.\n\nThanks again for your time and support!\n\nLink to leave a review below.";
+    fourthMessage.setAttribute("value", fourthMessage.value);
+    fourthMessage.dispatchEvent(new Event('input', { bubbles: true }));
+}
+
 
     console.log("✅ Updated messages injected.");
 }
