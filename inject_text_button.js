@@ -50,7 +50,7 @@ document.head.appendChild(style);
 
 // Create the button
 let button = document.createElement("button");
-button.innerText = "Inject Sample Sentences";
+button.innerText = "Inject Sample Messages";
 button.style.position = "fixed";
 button.style.top = "35px"; // Increased from 15px to 35px to add 20px padding
 button.style.right = "15px";
