@@ -29,7 +29,7 @@ function createButton(text, topOffset, onClick) {
     newButton.innerText = text;
     newButton.style.display = "block";
     newButton.style.position = "fixed";
-    newButton.style.top = `${topOffset}px`;
+    newButton.style.top = `${topOffset + 10}px`;
     newButton.style.right = "15px";
     newButton.style.zIndex = "1000";
     newButton.style.padding = "14px 28px";
