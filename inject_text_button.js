@@ -55,7 +55,7 @@ function createButton(text, onClick) {
 // Create the main button
 let button = createButton("Inject Sample Messages", () => {
     setFieldValues([
-        "🚨 REMINDER: Hey, this is an original sample message.",
+        "🚨🅰 REMINDER: Hey, this is an original sample message.",
         "🚨 REMINDER: Follow-up message #1 here.",
         "🚨 REMINDER: Follow-up message #2 here.",
         "🚨 REMINDER: Follow-up message #3 here."
