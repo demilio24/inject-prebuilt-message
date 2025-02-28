@@ -59,7 +59,7 @@ function createButton(text, onClick) {
 // Create the main button
 let button = createButton("Inject Sample Messages", () => {
     setFieldValues([
-        "🚨 REMINDER: Hey, this is an original sample message.",
+        "🚨👩 REMINDER: Hey, this is an original sample message.",
         "🚨 REMINDER: Follow-up message #1 here.",
         "🚨 REMINDER: Follow-up message #2 here.",
         "🚨 REMINDER: Follow-up message #3 here."
@@ -68,7 +68,7 @@ let button = createButton("Inject Sample Messages", () => {
     if (buttonsContainer.childNodes.length === 0) {
         let button2 = createButton("Inject Sample Variation", () => {
             setFieldValues([
-                "🚨 VARIATION: Here is another sample message variation.",
+                "🚨👩 VARIATION: Here is another sample message variation.",
                 "🚨 VARIATION: Follow-up message #1 variation.",
                 "🚨 VARIATION: Follow-up message #2 variation.",
                 "🚨 VARIATION: Follow-up message #3 variation."
@@ -77,7 +77,7 @@ let button = createButton("Inject Sample Messages", () => {
         
         let button3 = createButton("Inyectar Mensajes en Español", () => {
             setFieldValues([
-                "🚨 RECORDATORIO: Este es un mensaje de muestra en español.",
+                "🚨👩 RECORDATORIO: Este es un mensaje de muestra en español.",
                 "🚨 RECORDATORIO: Mensaje de seguimiento #1 en español.",
                 "🚨 RECORDATORIO: Mensaje de seguimiento #2 en español.",
                 "🚨 RECORDATORIO: Mensaje de seguimiento #3 en español."
