@@ -5,85 +5,75 @@ function setFieldValues() {
     let thirdMessage = document.querySelector("textarea[data-q='third_message_(follow_up_#2)']");
     let fourthMessage = document.querySelector("textarea[data-q='fourth_message_(follow_up_#3)']");
 
-   if (firstMessage) {
-    firstMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE].\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.";
-    firstMessage.setAttribute("value", firstMessage.value);
-    firstMessage.dispatchEvent(new Event('input', { bubbles: true }));
-}
+    if (firstMessage) {
+        firstMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE].\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.";
+        firstMessage.setAttribute("value", firstMessage.value);
+        firstMessage.dispatchEvent(new Event('input', { bubbles: true }));
+    }
 
-if (secondMessage) {
-    secondMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE] again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.";
-    secondMessage.setAttribute("value", secondMessage.value);
-    secondMessage.dispatchEvent(new Event('input', { bubbles: true }));
-}
-
-if (thirdMessage) {
-    thirdMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE].\n\nI know life gets busy, but I wanted to check in one more time. If you had a great experience with us, would you mind leaving a quick review? It only takes a moment, and it really helps us out.\n\nAppreciate you!\n\nLink to leave a review below.";
-    thirdMessage.setAttribute("value", thirdMessage.value);
-    thirdMessage.dispatchEvent(new Event('input', { bubbles: true }));
-}
-
-if (fourthMessage) {
-    fourthMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE] again.\n\nI promise this is the last time I’ll ask! We’d love to hear your thoughts on your experience with us. If you haven’t had a chance to leave a review yet, it would mean a lot.\n\nThanks again for your time and support!\n\nLink to leave a review below.";
-    fourthMessage.setAttribute("value", fourthMessage.value);
-    fourthMessage.dispatchEvent(new Event('input', { bubbles: true }));
-}
-
+    if (secondMessage) {
+        secondMessage.value = "🚨 REMINDER: BE SURE TO PERSONALIZE THIS MESSAGE BEFORE SENDING!\n\nHey, it’s [WRITE YOUR NAME HERE] from [WRITE YOUR BUSINESS NAME HERE] again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.";
+        secondMessage.setAttribute("value", secondMessage.value);
+        secondMessage.dispatchEvent(new Event('input', { bubbles: true }));
+    }
 
     console.log("✅ Updated messages injected.");
 }
 
-// Load the Poppins font
-let fontLink = document.createElement("link");
-fontLink.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"; // Bold weight
-fontLink.rel = "stylesheet";
-document.head.appendChild(fontLink);
+// Function to create and style a button
+function createButton(text) {
+    let newButton = document.createElement("button");
+    newButton.innerText = text;
+    newButton.style.display = "block";
+    newButton.style.marginTop = "10px";
+    newButton.style.padding = "14px 28px";
+    newButton.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)";
+    newButton.style.color = "white";
+    newButton.style.border = "none";
+    newButton.style.cursor = "pointer";
+    newButton.style.fontSize = "20px";
+    newButton.style.fontWeight = "bold";
+    newButton.style.fontFamily = "'Poppins', sans-serif";
+    newButton.style.borderRadius = "5px";
+    newButton.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
+    newButton.style.transition = "all 0.3s ease";
+    newButton.style.transform = "scale(0.9)";
 
-// Create a style block for fade-in animation
-let style = document.createElement("style");
-style.innerHTML = `
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-10px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-`;
-document.head.appendChild(style);
+    newButton.addEventListener("mouseenter", () => {
+        newButton.style.background = "linear-gradient(90deg, #0359b3, #5c0dbd)";
+    });
+    newButton.addEventListener("mouseleave", () => {
+        newButton.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)";
+    });
+    newButton.addEventListener("click", () => {
+        newButton.style.transform = "scale(1)";
+        setTimeout(() => newButton.style.transform = "scale(0.9)", 150);
+    });
+    return newButton;
+}
 
-// Create the button
-let button = document.createElement("button");
-button.innerText = "Inject Sample Messages";
+// Create the main button
+let button = createButton("Inject Sample Messages");
 button.style.position = "fixed";
-button.style.top = "35px"; // Increased from 15px to 35px to add 20px padding
+button.style.top = "35px";
 button.style.right = "15px";
 button.style.zIndex = "1000";
-button.style.padding = "14px 28px"; // 40% bigger
-button.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)"; // Gradient from blue to purple
-button.style.color = "white";
-button.style.border = "none";
-button.style.cursor = "pointer";
-button.style.fontSize = "20px"; // 40% bigger than previous (14.4px → 20px)
-button.style.fontWeight = "bold"; // Bold text
-button.style.fontFamily = "'Poppins', sans-serif";
-button.style.borderRadius = "5px";
-button.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
-button.style.transition = "all 0.3s ease";
-button.style.transform = "scale(0.9)"; // Initial 10% smaller
-button.style.animation = "fadeIn 0.6s ease-out"; // Entrance animation
 
-// Apply hover effect
-button.addEventListener("mouseenter", () => {
-    button.style.background = "linear-gradient(90deg, #0359b3, #5c0dbd)"; // Slightly darker gradient on hover
-});
-button.addEventListener("mouseleave", () => {
-    button.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)"; // Revert to original gradient
-});
+let buttonsContainer = document.createElement("div");
+buttonsContainer.style.position = "fixed";
+buttonsContainer.style.top = "80px";
+buttonsContainer.style.right = "15px";
+buttonsContainer.style.zIndex = "1000";
 
-// Apply grow effect on click
 button.addEventListener("click", () => {
-    button.style.transform = "scale(1)";
-    setTimeout(() => button.style.transform = "scale(0.9)", 150);
     setFieldValues();
+    if (buttonsContainer.childNodes.length === 0) {
+        let button2 = createButton("Button 2");
+        let button3 = createButton("Button 3");
+        buttonsContainer.appendChild(button2);
+        buttonsContainer.appendChild(button3);
+    }
 });
 
-// Append the button to the page (top-right corner)
 document.body.appendChild(button);
+document.body.appendChild(buttonsContainer);
