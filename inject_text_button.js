@@ -24,11 +24,14 @@ function setFieldValues(messages) {
 }
 
 // Function to create and style a button
-function createButton(text, onClick) {
+function createButton(text, topOffset, onClick) {
     let newButton = document.createElement("button");
     newButton.innerText = text;
     newButton.style.display = "block";
-    newButton.style.marginTop = "10px";
+    newButton.style.position = "fixed";
+    newButton.style.top = `${topOffset}px`;
+    newButton.style.right = "15px";
+    newButton.style.zIndex = "1000";
     newButton.style.padding = "14px 28px";
     newButton.style.background = "linear-gradient(90deg, #046bd2, #6a0dad)";
     newButton.style.color = "white";
@@ -41,10 +44,6 @@ function createButton(text, onClick) {
     newButton.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
     newButton.style.transition = "all 0.3s ease";
     newButton.style.transform = "scale(0.9)";
-    newButton.style.position = "fixed";
-    newButton.style.top = "15px";
-    newButton.style.right = "15px";
-    newButton.style.zIndex = "1000";
     newButton.addEventListener("click", onClick);
 
     newButton.addEventListener("mouseenter", () => {
@@ -56,44 +55,34 @@ function createButton(text, onClick) {
     return newButton;
 }
 
-// Create the main button
-let button = createButton("Inject Sample Messages", () => {
+// Create and append all three buttons at the top-right from the start
+let button1 = createButton("Inject Sample Messages 1", 25, () => {
     setFieldValues([
-        "🚨👩 REMINDER: Hey, this is an original sample message.",
+        "🚨 REMINDER: Hey, this is an original sample message.",
         "🚨 REMINDER: Follow-up message #1 here.",
         "🚨 REMINDER: Follow-up message #2 here.",
         "🚨 REMINDER: Follow-up message #3 here."
     ]);
-
-    if (buttonsContainer.childNodes.length === 0) {
-        let button2 = createButton("Inject Sample Variation", () => {
-            setFieldValues([
-                "🚨👩 VARIATION: Here is another sample message variation.",
-                "🚨 VARIATION: Follow-up message #1 variation.",
-                "🚨 VARIATION: Follow-up message #2 variation.",
-                "🚨 VARIATION: Follow-up message #3 variation."
-            ]);
-        });
-        
-        let button3 = createButton("Inyectar Mensajes en Español", () => {
-            setFieldValues([
-                "🚨👩 RECORDATORIO: Este es un mensaje de muestra en español.",
-                "🚨 RECORDATORIO: Mensaje de seguimiento #1 en español.",
-                "🚨 RECORDATORIO: Mensaje de seguimiento #2 en español.",
-                "🚨 RECORDATORIO: Mensaje de seguimiento #3 en español."
-            ]);
-        });
-        
-        buttonsContainer.appendChild(button2);
-        buttonsContainer.appendChild(button3);
-    }
 });
 
-let buttonsContainer = document.createElement("div");
-buttonsContainer.style.position = "fixed";
-buttonsContainer.style.top = "60px";
-buttonsContainer.style.right = "15px";
-buttonsContainer.style.zIndex = "1000";
+let button2 = createButton("Inject Sample Messages 2", 75, () => {
+    setFieldValues([
+        "🚨 VARIATION: Here is another sample message variation.",
+        "🚨 VARIATION: Follow-up message #1 variation.",
+        "🚨 VARIATION: Follow-up message #2 variation.",
+        "🚨 VARIATION: Follow-up message #3 variation."
+    ]);
+});
 
-document.body.appendChild(button);
-document.body.appendChild(buttonsContainer);
+let button3 = createButton("Inyectar Mensajes en Español", 125, () => {
+    setFieldValues([
+        "🚨 RECORDATORIO: Este es un mensaje de muestra en español.",
+        "🚨 RECORDATORIO: Mensaje de seguimiento #1 en español.",
+        "🚨 RECORDATORIO: Mensaje de seguimiento #2 en español.",
+        "🚨 RECORDATORIO: Mensaje de seguimiento #3 en español."
+    ]);
+});
+
+document.body.appendChild(button1);
+document.body.appendChild(button2);
+document.body.appendChild(button3);
