@@ -7,22 +7,22 @@ function setFieldValues(setType) {
 
     let messages = {
         set1: [
-            "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nHope you’re doing well! You worked with us a little while back, and I just wanted to reach out personally. If you had a good experience, would you mind leaving a quick review? It helps us a ton, and I’d really appreciate it.\n\nThanks so much!\n\nLink to leave a review below.",
-            "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nJust wanted to follow up in case you missed my last message. Your feedback means a lot to us, and we’d love to hear about your experience.\n\nIf you have a quick moment, I’d really appreciate it! Thanks again.\n\nLink to leave a review below.",
-            "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }}.\n\nI know life gets busy, but I wanted to check in one more time. If you had a great experience with us, would you mind leaving a quick review? It only takes a moment, and it really helps us out.\n\nAppreciate you!\n\nLink to leave a review below.",
-            "🚨 Reminder: Be sure to personalize this message before sending!\n\nHey, it’s {{ custom_values.from_name_emails }} from {{ custom_values.business_name }} again.\n\nI promise this is the last time I’ll ask! We’d love to hear your thoughts on your experience with us. If you haven’t had a chance to leave a review yet, it would mean a lot.\n\nThanks again for your time and support!\n\nLink to leave a review below."
+            "🚨 Reminder: Personalize this message before sending!\n\nHey, it's [Business Owner's Name] from [Business Name],\n\nWe loved having you as a customer, and we'd truly appreciate it if you could take a moment to leave us a review! Your feedback helps us improve and helps others too.\n\nThank you so much for your time!\n\nLeave your review here: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHey, it's [Business Owner's Name] from [Business Name],\n\nJust following up! We’d love to hear about your experience with us. If you haven’t had a chance to leave a review yet, it would mean the world to us!\n\nYou can leave your review here: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHey, it's [Business Owner's Name] from [Business Name],\n\nWe know life gets busy, but your review would really help us and others considering our services! If you can spare a moment, we’d love your feedback.\n\nLeave your review here: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHey, it's [Business Owner's Name] from [Business Name],\n\nThis is our last follow-up! We truly appreciate your time and support. If you’re able to leave a review, we’d be so grateful!\n\nHere’s the link to leave a review: [Insert Link]"
         ],
         set2: [
-            "Hello! Just wanted to follow up on our previous conversation. Do you have any questions or need any further details? Let me know, I’d love to help!",
-            "Hey there! Checking in to see if you had a chance to consider our proposal. Let me know if you have any concerns!",
-            "Hope you’re doing well! I just wanted to circle back and see if you needed any additional information. Looking forward to your response!",
-            "Just a final follow-up! If you’re interested, I’d love to discuss further. Let me know your thoughts. Thanks again!"
+            "🚨 Reminder: Personalize this message before sending!\n\nHi, it's [Business Owner's Name] from [Business Name],\n\nWe hope you’re doing great! If you had a great experience with us, we’d love it if you could share your thoughts in a quick review.\n\nThank you for your support!\n\nLeave your review here: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHey again, it's [Business Owner's Name] from [Business Name]!\n\nJust wanted to check if you had a chance to leave us a review. It would really help us and others looking for great service!\n\nHere’s the link to leave your review: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHi, it's [Business Owner's Name] from [Business Name],\n\nStill hoping to hear your thoughts! Your feedback is valuable, and we’d appreciate your time if you could leave a review.\n\nYou can share your experience here: [Insert Link]",
+            "🚨 Reminder: Personalize this message before sending!\n\nHey, it's [Business Owner's Name] from [Business Name],\n\nWe promise this is the last reminder! We’d truly love to hear from you. A few words in a review would mean a lot to us.\n\nHere’s the review link: [Insert Link]"
         ],
         set3: [
-            "🚨 Recordatorio: Asegúrate de personalizar este mensaje antes de enviarlo!\n\nHola, soy {{ custom_values.from_name_emails }} de {{ custom_values.business_name }}.\n\nEspero que estés bien. Hace un tiempo trabajaste con nosotros y quería comunicarme personalmente. Si tuviste una buena experiencia, ¿te importaría dejarnos una reseña rápida? Nos ayuda muchísimo y te lo agradecería mucho.\n\n¡Muchas gracias!\n\nEnlace para dejar una reseña abajo.",
-            "🚨 Recordatorio: Asegúrate de personalizar este mensaje antes de enviarlo!\n\nHola, soy {{ custom_values.from_name_emails }} de {{ custom_values.business_name }} otra vez.\n\nSolo quería hacer un seguimiento en caso de que te hayas perdido mi último mensaje. Tu opinión significa mucho para nosotros y nos encantaría saber sobre tu experiencia.\n\nSi tienes un momento, ¡te lo agradecería mucho! Gracias de nuevo.\n\nEnlace para dejar una reseña abajo.",
-            "🚨 Recordatorio: Asegúrate de personalizar este mensaje antes de enviarlo!\n\nHola, soy {{ custom_values.from_name_emails }} de {{ custom_values.business_name }}.\n\nSé que la vida puede estar ocupada, pero quería hacer un último intento. Si tuviste una gran experiencia con nosotros, ¿te importaría dejarnos una reseña rápida? Solo toma un momento y realmente nos ayuda.\n\n¡Te lo agradezco mucho!\n\nEnlace para dejar una reseña abajo.",
-            "🚨 Recordatorio: Asegúrate de personalizar este mensaje antes de enviarlo!\n\nHola, soy {{ custom_values.from_name_emails }} de {{ custom_values.business_name }} otra vez.\n\n¡Prometo que esta es la última vez que pregunto! Nos encantaría saber tus pensamientos sobre tu experiencia con nosotros. Si aún no has dejado una reseña, significaría mucho para nosotros.\n\nGracias de nuevo por tu tiempo y apoyo.\n\nEnlace para dejar una reseña abajo."
+            "🚨 ¡Recuerda personalizar este mensaje antes de enviarlo!\n\nHola, soy [Nombre del Dueño] de [Nombre del Negocio],\n\nNos encantó atenderte y nos encantaría saber tu opinión. ¿Podrías dejarnos una reseña? ¡Nos ayudaría mucho!\n\nDeja tu reseña aquí: [Insertar Enlace]",
+            "🚨 ¡Recuerda personalizar este mensaje antes de enviarlo!\n\nHola, soy [Nombre del Dueño] de [Nombre del Negocio],\n\nSolo un recordatorio amistoso. Tu opinión nos importa y nos ayudaría mucho si pudieras compartir tu experiencia.\n\nPuedes dejar tu reseña aquí: [Insertar Enlace]",
+            "🚨 ¡Recuerda personalizar este mensaje antes de enviarlo!\n\nHola, soy [Nombre del Dueño] de [Nombre del Negocio],\n\nQueríamos asegurarnos de que tuviste la oportunidad de dejarnos una reseña. ¡Cada opinión cuenta!\n\nComparte tu experiencia aquí: [Insertar Enlace]",
+            "🚨 ¡Recuerda personalizar este mensaje antes de enviarlo!\n\nHola, soy [Nombre del Dueño] de [Nombre del Negocio],\n\nPrometemos que este es nuestro último mensaje. Nos encantaría saber tu opinión. Si tienes un momento, deja tu reseña aquí: [Insertar Enlace]"
         ]
     };
 
@@ -34,6 +34,12 @@ function setFieldValues(setType) {
         }
     });
 }
+
+// Load the Poppins font
+let fontLink = document.createElement("link");
+fontLink.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap";
+fontLink.rel = "stylesheet";
+document.head.appendChild(fontLink);
 
 // Create buttons
 types = ["set1", "set2", "set3"];
@@ -53,6 +59,7 @@ types.forEach((type, index) => {
     button.style.cursor = "pointer";
     button.style.fontSize = "16px";
     button.style.fontWeight = "bold";
+    button.style.fontFamily = "'Poppins', sans-serif";
     button.style.borderRadius = "5px";
     button.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
     button.style.transition = "all 0.3s ease";
