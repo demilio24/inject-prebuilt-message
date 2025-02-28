@@ -41,6 +41,10 @@ function createButton(text, onClick) {
     newButton.style.boxShadow = "0px 4px 6px rgba(0, 0, 0, 0.1)";
     newButton.style.transition = "all 0.3s ease";
     newButton.style.transform = "scale(0.9)";
+    newButton.style.position = "fixed";
+    newButton.style.top = "15px";
+    newButton.style.right = "15px";
+    newButton.style.zIndex = "1000";
     newButton.addEventListener("click", onClick);
 
     newButton.addEventListener("mouseenter", () => {
@@ -55,7 +59,7 @@ function createButton(text, onClick) {
 // Create the main button
 let button = createButton("Inject Sample Messages", () => {
     setFieldValues([
-        "🚨🅰 REMINDER: Hey, this is an original sample message.",
+        "🚨 REMINDER: Hey, this is an original sample message.",
         "🚨 REMINDER: Follow-up message #1 here.",
         "🚨 REMINDER: Follow-up message #2 here.",
         "🚨 REMINDER: Follow-up message #3 here."
@@ -87,7 +91,7 @@ let button = createButton("Inject Sample Messages", () => {
 
 let buttonsContainer = document.createElement("div");
 buttonsContainer.style.position = "fixed";
-buttonsContainer.style.top = "80px";
+buttonsContainer.style.top = "60px";
 buttonsContainer.style.right = "15px";
 buttonsContainer.style.zIndex = "1000";
 
